@@ -3,7 +3,8 @@
 ## 个人博客搭建
 技术栈   vue+vue-router+vue-d2+vue-vuex+egg+mongooes+nginx
 
-开发中  
+When I wrote this, only God and I understood what I was doing
+Now, God only knows
 地址：http://101.200.54.162
 `                  
                                                         !
