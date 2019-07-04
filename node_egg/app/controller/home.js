@@ -25,6 +25,17 @@ class HomeController extends Controller {
    data: ctx.cookies._keys
  };
   }
+  async welcome() {
+    let {
+      ctx
+    } = this;
+ ctx.session.token = null;
+ ctx.status = 200;
+ ctx.body = {
+   res: "欢迎使用egg",
+   data: ctx.cookies._keys
+ };
+  }
 }
 
 module.exports = HomeController;
