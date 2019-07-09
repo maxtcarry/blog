@@ -1,4 +1,4 @@
-# bool
+# blog
 
 ## 个人博客搭建
 技术栈   vue+vue-router+vue-d2+vue-vuex+egg+mongooes+nginx
