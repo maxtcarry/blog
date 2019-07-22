@@ -1,0 +1,203 @@
+.main_msg{
+  margin-top: 68px;
+  min-height: 600px;
+  border-bottom: 3px solid var(--fu-color2);
+  width: 100%;
+  background: url('https://picsum.photos/1960/1080/?random') no-repeat  var(--font-color2);
+  overflow: hidden;
+  background-size: 100%;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+.author{
+  width: 616px;
+  margin: 120px auto;
+}
+.v_show{
+  font-size: 24px;
+  height: 24px;
+  text-align: center;
+  color: var(--bg-color3);
+  text-shadow: 0px 1px 1px var(--bg-color2);
+  position: relative;
+}
+.v_show::after{
+  content: "|";
+  top: 2px;
+  width: 1px;
+  height: 24px;
+  position: absolute;
+  transition: all 1s;
+animation: myfirst 1s ease  infinite;
+text-shadow: none;
+}
+@keyframes myfirst {
+    0% {color: var(--main-color3);}
+    1% {color: var(--main-color2);}
+    99% { color: var(--font-color2);}
+    100% { color: var(--font-color1);}
+}
+.author .name{
+  width: 320px;
+  height: 40px;
+  line-height:  40px;
+  text-indent:  20px;
+  border: 1px solid var(--bg-color5);
+  border-left: 4px solid var(--fu-color2);
+  outline: none;
+  color: var(--font-color2);
+  margin: 4px 8px;
+}
+.author .postmsg{
+  float: right;
+  margin: 4px 8px;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  border:none;
+  background: var(--main-color);
+  color: var(--bg-color3);
+
+
+}
+.author .content{
+  margin: 4px 8px;
+  width: 600px;
+  height: 200px;
+  font-size: 18px;
+  line-height: 20px;
+  outline: none;
+  border: 1px solid var(--bg-color5);
+  border-left: 4px solid var(--fu-color2);
+  resize: none;
+  padding: 10px;
+  color: var(--font-color2);
+  text-indent: 0em;
+}
+.msgitem .author .content{
+  text-indent: 0em;
+}
+.changebtn{
+  background: url(../../../static/img/jiaoyin.png) no-repeat ;
+  background-size: 100%;
+  width: 60px;
+  height: 80px;
+  outline: none;
+  border:none;
+  cursor: pointer;
+}
+.msglist{
+
+  flex-wrap:wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+.msgitem{
+  position: relative;
+  width:80%;
+  background: var(--bg-color3);
+  padding:0px 0px 16px;
+  margin: 20px auto;
+  border-radius: 6px;
+
+}
+.msgitem .content{
+  width: 100%;
+  overflow: hidden;
+  min-height: 64px;
+  line-height: 30px;
+  padding:0px 20px;
+  word-wrap:break-word;
+  text-indent: 2em;
+}
+.msgitem .content .revert{
+  font-size: 10px;
+  color: var(--fu-color2);
+  cursor: pointer;
+}
+.msgitem .content .revert:hover{
+  text-decoration: underline;
+}
+
+.msgitem .author{
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  color:var(--fu-color2);
+  opacity: 1;
+  font-size: 14px;
+  padding: 20px 36px 8px;
+  margin: 0;
+  background: var(--bg-color2);
+  border-bottom:1px dashed var(--font-color3);
+}
+.msgitem .revertNone{
+  display: none;
+}
+.msgitem .author .say{
+  color: var(--main-color);
+}
+ .msgitem .createTime{
+   float: right;
+   border-left: 3px solid var(--tiao-color1);
+  padding: 0px 20px;
+  margin-left: 20px;
+  color: var(--fu-color1);
+}
+.loadMore{
+  color: var(--bg-color3);
+  text-align: center;
+  padding: 20px 0px;
+}
+.loadMore span{
+  padding:4px 8px;
+  border-radius: 3px;
+  background: var(--fu-color2);
+}
+
+.loadMore span:hover{
+  cursor: pointer;
+  background: rgba(226, 51, 82, 0.9);
+}
+.loadMoreDefu{
+  color: var(--bg-color3);
+  text-align: center;
+  padding: 20px 0px;
+}
+.loadMoreDefu span{
+  padding:4px 8px;
+  border-radius: 3px;
+}
+.msgitem{
+  margin: 0px 0px;
+  padding:3px 20px;
+  display: inline-block;
+  color: var(--font-color1);
+  width: 100%;
+  overflow: hidden;
+  word-wrap:break-word
+}
+.revertContent{
+  margin: 10px 0px;
+  padding:20px;
+  border: 4px solid var(--main-color);
+  border-radius: 4px;
+  font-size: 12px;
+
+}
+.revertContentNo{
+    display: none;
+}
+.msgitem em{
+  padding:0px 4px ;
+  color: var(--bg-color4);
+
+}
+.noshow{
+  float: right;
+  padding:4px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--fu-color1);
+}

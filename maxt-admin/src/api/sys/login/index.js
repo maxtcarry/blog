@@ -1,5 +1,6 @@
 import request from '@/plugin/axios'
-let url = 'http://127.0.0.1:7001/'
+import url from '@/api/url'
+// let url = 'http://101.200.54.162:7001/'
 export function AccountLogin (data) {
   return request({
     url: url + 'login',
@@ -13,7 +14,7 @@ export function GetToken () {
   })
 }
 export function LoginOut () {
-    return request({
-      url: url + 'loginout'
-    })
-  }
+  return request({
+    url: url + 'loginout'
+  })
+}
