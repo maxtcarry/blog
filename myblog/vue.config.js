@@ -1,6 +1,8 @@
 const path = require('path')
 const resolve = (dir) => path.join(__dirname, dir)
-
+//"parserOptions": {
+//   "parser": "babel-eslint"
+// }
 module.exports = {
   // 项目部署的基础路径
   // 我们默认假设你的应用将会部署在域名的根部，
@@ -78,7 +80,6 @@ module.exports = {
     // 这个选项不会影响 `*.vue` 文件。
     modules: false
   },
-
   // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
   // 在多核机器下会默认开启。
   parallel: require('os').cpus().length > 1,

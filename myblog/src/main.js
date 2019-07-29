@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router/router'
+import router from '@/plugins/router/router'
 import './assets/css/common.css' /*引入公共样式*/
 // import axios from 'axios'
 // axios.defaults.withCredentials=true;//让ajax携带cookie
