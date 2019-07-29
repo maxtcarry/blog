@@ -1,7 +1,7 @@
 # blog
 
 ## 个人博客搭建
-技术栈   vue+vue-router+vue-d2+vue-vuex+egg+mongooes+nginx
+技术栈   vue+vue-router+vue-d2admin+vue-vuex+egg+mongooes+nginx
 
 When I wrote this, only God and I understood what I was doing
 Now, God only knows
