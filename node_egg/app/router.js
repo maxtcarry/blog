@@ -15,8 +15,8 @@ module.exports = app => {
   * DELETE	   /posts/:id	         post     	  app.controllers.posts.destroy
   */
    router.get('/', controller.home.welcome);
-  router.get('/home', controller.home.index);
-  router.get('/loginout', controller.home.loginout);
+  router.get('/getIp', controller.home.getIP);
+  router.get('/getConfig', controller.home.getConfig);
   router.get('/articleList', controller.article.articleList);
   router.post('/login',controller.user.login);
   router.resources('user', '/user', controller.user)//curd

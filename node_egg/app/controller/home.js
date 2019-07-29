@@ -1,9 +1,9 @@
 'use strict';
-
+// 系统参数输出
 const Controller = require('egg').Controller;
-
 class HomeController extends Controller {
-  async index() {
+  
+  async getIP() {
     let {
       ctx
     } = this;
@@ -11,31 +11,32 @@ class HomeController extends Controller {
       ctx.session.token = ctx.csrf;
     }
     ctx.status = 200;
-    console.log('提示',ctx.csrf)
-    this.ctx.body = ctx.session.token;
+    this.ctx.body = {
+      ip: ctx.ip
+    };
   }
-  async loginout() {
+
+  async getConfig() {
     let {
       ctx
     } = this;
- ctx.session.token = null;
- ctx.status = 200;
- ctx.body = {
-   res: "当前用户退出登陆",
-   data: ctx.cookies._keys
- };
-  }
-  async welcome() {
-    let {
-      ctx
-    } = this;
- ctx.session.token = null;
- ctx.status = 200;
- ctx.body = {
-   res: "欢迎使用egg",
-   data: ctx.cookies._keys
- };
-  }
+    ctx.status = 200;
+    this.ctx.body = {
+      ...this.ctx.session
+      }
+  };
+
+async welcome() {
+  let {
+    ctx
+  } = this;
+  ctx.session.token = null;
+  ctx.status = 200;
+  ctx.body = {
+    res: "欢迎使用egg",
+    data: ctx.cookies._keys
+  };
+}
 }
 
 module.exports = HomeController;
