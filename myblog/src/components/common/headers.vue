@@ -4,8 +4,9 @@
     <span href="#" v-for="(id,index) in acitved" v-bind:class="{actives:id.id==isActive}" v-on:click="on_active(id.id)">{{id.text}}</span>
   </nav>
 </div>
-</template> 
+</template>
 <script>
+req
 export default {
   name: 'HEADERHTML',
   data:function(){

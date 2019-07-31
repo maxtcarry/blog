@@ -12,10 +12,7 @@ export default {
     return {
       msg:''
     }
-
   },
-
-
 }
 </script>
 
