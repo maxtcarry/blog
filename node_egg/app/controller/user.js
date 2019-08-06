@@ -23,16 +23,9 @@ class UserController extends Controller {
     let resbody = {};
     let logindata = ctx.request.body;
     const res = await service.user.getUserInfo(logindata.username);
+    console.log(res)
     if (+(res.length) > 0) {
-      if (res[0].username !== logindata.username) {
-        resbody = {
-          msg: "ok",
-          status: "error",
-          data: "账号不存在"
-        }
-        this.ctx.body = resbody;
-        return
-      }
+
       if (res[0].password !== logindata.password) {
         resbody = {
           msg: "ok",
@@ -43,10 +36,12 @@ class UserController extends Controller {
         return
       }
       ctx.session[logindata.username] = logindata.password;
+
       ctx.status = 200;
       resbody = {
         msg: "登陆成功",
         status: "200",
+        session:ctx.session,
         data: res,
       };
       this.ctx.body = resbody;
@@ -56,13 +51,13 @@ class UserController extends Controller {
       resbody = {
         msg: "error",
         status: "400",
-        data: "账号密码不存在"
+        data: "账号不存在"
       };
       this.ctx.body = resbody;
       return
     }
   }
-  
+
   async create() {
     const {
       ctx,

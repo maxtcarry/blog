@@ -5,6 +5,9 @@ class UserService extends Service {
     return  await this.ctx.model.User.find().sort({_id:-1}).skip(0).limit(1);
   }
   async getUserInfo(req) {
+    if(!req){
+      return []
+    }
     return  await this.ctx.model.User.find({"username":req});
   }
 
