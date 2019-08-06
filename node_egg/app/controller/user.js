@@ -23,8 +23,7 @@ class UserController extends Controller {
     let resbody = {};
     let logindata = ctx.request.body;
     const res = await service.user.getUserInfo(logindata.username);
-    console.log(res)
-    if (+(res.length) > 0) {
+    if (+res.length > 0) {
 
       if (res[0].password !== logindata.password) {
         resbody = {
