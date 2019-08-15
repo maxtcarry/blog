@@ -3,7 +3,7 @@
   <div id="canvas" @click="changeBG" v-bind:style="gbIMG">
     <div class="serve">
       <div class="fsz36">
-        可乐的泡泡
+        可乐
       </div>
       <div><span class="superShadow">服务端</span>基于[node][eggjs]</div>
       <div><span class="superShadow">前端</span>基于[vue]</div>
@@ -15,9 +15,10 @@
     <div><span>email</span>[<a href="javascript:void(0);">maxtcarry@163.com</a>]</div>
     <div><span>网站已运行</span><a href="javascript:void(0);">{{daycoding}}</a>天{{hourscoding}}小时</div>
   </div>
-  <!-- <div class="">
+  <div class="">
 
-  </div> -->
+
+  </div>
 </div>
 </template>
 <script>
@@ -38,6 +39,8 @@ export default {
     //计算运行时间
     this.daycoding = parseInt((new Date().getTime() - new Date('2019-07-22'.replace(/-/g, "/")).getTime()) / (1000 * 60 * 60 * 24));
     this.hourscoding = new Date().getHours();
+
+
     //随机图片
     var random = parseInt(Math.random() * 990);
     var imgurl = new Image();
@@ -46,8 +49,10 @@ export default {
       this.gbIMG = {
         'background-image': `url(${imgurl.src})`,
       };
+
     }
     TweenLite.fromTo('.fsz36', 3, {textShadow:"0px 0px 0px red"}, {textShadow:"0px 0px 20px #328893"});
+
   },
 
   methods: {
@@ -61,6 +66,7 @@ export default {
         };
       }
     },
+
   },
 
 }
@@ -78,14 +84,13 @@ export default {
     font-size: 36px;
     margin: 10px 0;
 }
-#canvas {
+#mycanvas {
     width: 100%;
     margin: 0 auto;
     height: 668px;
     background-repeat: no-repeat;
-    background-color: var(--bg-color3);
+    background-color: var(--font-color1);
     background-size: cover;
-
     display: flex;
     justify-content: center;
     align-items: center;

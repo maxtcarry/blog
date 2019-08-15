@@ -6,7 +6,7 @@
 </div>
 </template>
 <script>
-req
+
 export default {
   name: 'HEADERHTML',
   data:function(){
