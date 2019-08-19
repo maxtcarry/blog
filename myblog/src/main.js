@@ -10,7 +10,11 @@ import './assets/css/common.css' /*引入公共样式*/
 // Vue.prototype.$axios = axios;
 // import live2d4vue from 'live2d4vue'
 Vue.config.productionTip = false
-
+router.beforeEach((to, from, next) => {
+  // ...
+  console.log(from.name+'———to———'+to.name)
+  next()
+})
 new Vue({
   router,
   // store,

@@ -2,7 +2,10 @@
   <div id="app">
     <HEADERHTML ></HEADERHTML>
     <!-- <MAINHTML ></MAINHTML> -->
-    <router-view></router-view>
+      <router-view></router-view>
+    <!-- <transition :name="transitionName">
+
+    </transition> -->
     <FOOTERHTML ></FOOTERHTML>
 
   </div>
@@ -15,12 +18,22 @@ export default {
   name: 'App',
       data(){
         return {
+      //    transitionName:'slide-right'
         }
       },
   components:{
     HEADERHTML,
     FOOTERHTML
-  }
+  },
+//   watch: {
+//   '$route' (to, from) {
+//     const toDepth = to.path.split('/').length
+//     const fromDepth = from.path.split('/').length
+//     console.log(toDepth)
+//     console.log(fromDepth)
+//     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+//   }
+// }
 }
 </script>
 
