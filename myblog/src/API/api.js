@@ -18,7 +18,7 @@ function getArticleInfo(id) {
 }
 //获取文章列表
 function getArticleList() {
-  return axios.get(url + '/articleList');
+  return axios.get('/articleList');
 }
 //获取留言列表
 function getMessageList(obj) {

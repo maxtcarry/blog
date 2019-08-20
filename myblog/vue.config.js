@@ -89,11 +89,12 @@ module.exports = {
     port: 8021,
     https: false,
     hotOnly: false,
-    open: false,
+    open: 'Chrome',
+
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
     proxy: {
       '/api': {
-        target: 'https://bjadv.zk2013.com',
+        target: 'http://127.0.0.1:7001',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

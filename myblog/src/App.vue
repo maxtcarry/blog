@@ -4,7 +4,6 @@
     <!-- <MAINHTML ></MAINHTML> -->
       <router-view></router-view>
     <!-- <transition :name="transitionName">
-
     </transition> -->
     <FOOTERHTML ></FOOTERHTML>
 

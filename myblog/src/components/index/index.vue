@@ -16,13 +16,15 @@
     <div><span>网站已运行</span><a href="javascript:void(0);">{{daycoding}}</a>天{{hourscoding}}小时</div>
   </div>
   <div class="">
-
-
+  
   </div>
 </div>
 </template>
 <script>
-import {TweenMax,TweenLite} from "gsap/TweenMax";
+import {
+  TweenMax,
+  TweenLite
+} from "gsap/TweenMax";
 export default {
   name: 'Index',
   data() {
@@ -39,8 +41,6 @@ export default {
     //计算运行时间
     this.daycoding = parseInt((new Date().getTime() - new Date('2019-07-22'.replace(/-/g, "/")).getTime()) / (1000 * 60 * 60 * 24));
     this.hourscoding = new Date().getHours();
-
-
     //随机图片
     var random = parseInt(Math.random() * 990);
     var imgurl = new Image();
@@ -51,8 +51,11 @@ export default {
       };
 
     }
-    TweenLite.fromTo('.fsz36', 3, {textShadow:"0px 0px 0px red"}, {textShadow:"0px 0px 20px #328893"});
-
+    TweenLite.fromTo('.fsz36', 3, {
+      textShadow: "0px 0px 0px red"
+    }, {
+      textShadow: "0px 0px 20px #328893"
+    });
   },
 
   methods: {
