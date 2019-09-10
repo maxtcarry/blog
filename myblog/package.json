@@ -6,10 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "bench":"node tests/benchmark/index.test.js"
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "benchmark": "^2.1.4",
     "core-js": "^2.6.5",
     "easycanvas": "^0.8.0",
     "gasp": "0.0.2",

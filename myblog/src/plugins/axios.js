@@ -8,6 +8,7 @@ console.log(process.env.NODE_ENV )
 axios.defaults.headers.Authorization = localStorage['token'] || "null"
 axios.interceptors.request.use(function (config) {
   // Do something before request is sent
+    // Toast('数据加载中···');
   config.headers['x-csrf-token'] = Cookies.get('csrfToken')
   return config
 }, function (error) {

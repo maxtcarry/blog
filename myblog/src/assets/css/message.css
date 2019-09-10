@@ -1,17 +1,19 @@
 .main_msg{
+  background: url('https://picsum.photos/1960/1080/?random') no-repeat  var(--font-color2);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: 100%;
+  border-bottom: 3px solid var(--fu-color2);
+
   margin-top: 68px;
   min-height: 600px;
-  border-bottom: 3px solid var(--fu-color2);
-  width: 100%;
-  background: url('https://picsum.photos/1960/1080/?random') no-repeat  var(--font-color2);
   overflow: hidden;
-  background-size: 100%;
-  background-position: bottom;
-  background-attachment: fixed;
+  width: 100%;
 }
 .author{
-  width: 616px;
   margin: 120px auto;
+  width: 616px;
+
 }
 .v_show{
   font-size: 24px;
@@ -74,10 +76,10 @@ text-shadow: none;
   resize: none;
   padding: 10px;
   color: var(--font-color2);
-  text-indent: 0em;
+  text-indent: 0;
 }
 .msgitem .author .content{
-  text-indent: 0em;
+  text-indent: 0;
 }
 .changebtn{
   background: url(../../../static/img/jiaoyin.png) no-repeat ;

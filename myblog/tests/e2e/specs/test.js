@@ -2,7 +2,11 @@
 
 describe('My First Test', () => {
   it('Visits the app root url', () => {
-    cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js App')
+    cy.visit('/demon')
+    cy.contains('span', '联系方式')
+  })
+  it('Visits the app root url', () => {
+    cy.visit('/index')
+    cy.contains('div', '可乐')
   })
 })
