@@ -73,13 +73,38 @@ module.exports = {
     loaderOptions: {
       less: {
         javascriptEnabled: true
-      }
+      },
+      css: {
+       localIdentName: '[name]-[hash]',
+       camelCase: 'only',
+       // @/ 是 src/ 的别名
+       data: `@import "~@/assets/css/common.css"`
+     }
+
     },
 
     // 为所有的 CSS 及其预处理文件开启 CSS Modules。
     // 这个选项不会影响 `*.vue` 文件。
-    modules: false
+    modules: true
   },
+  rules: [
+     // ... 其它规则省略
+     {
+       test: /\.css$/,
+       use: [
+         'vue-style-loader',
+         {
+           loader: 'css-loader',
+           options: {
+             // 开启 CSS Modules
+             modules: true,
+             // 自定义生成的类名
+             localIdentName: '[local]_[hash:base64:8]'
+           }
+         }
+       ]
+     },
+   ],
   // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
   // 在多核机器下会默认开启。
   parallel: require('os').cpus().length > 1,
