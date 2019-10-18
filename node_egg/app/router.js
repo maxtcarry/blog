@@ -12,7 +12,7 @@ module.exports = app => {
   * GET	       /posts/:id/edit	   edit_post	  app.controllers.posts.edit
   * POST	     /posts	             posts	      app.controllers.posts.create
   * PUT	       /posts/:id	         post	        app.controllers.posts.update
-  * DELETE	   /posts/:id	         post     	  app.controllers.posts.destroy
+  * DELETE	   /posts/:id	         post      	  app.controllers.posts.destroy
   */
    router.get('/', controller.home.welcome);
   router.get('/getIp', controller.home.getIP);

@@ -5,8 +5,8 @@ module.exports = appInfo => {
   config.keys = "demonsLOVE";
   config.security = {
     csrf: {
-      enable: false ,
-      ignoreJSON: true,
+      enable: true ,
+      ignoreJSON: false,
       headerName: 'demontoken',
     },
     domainWhiteList: ['*']
@@ -23,11 +23,9 @@ module.exports = appInfo => {
   };
   //连接mongodb 本地数据库
   exports.mongoose = {
-
     //线上数据库地址
   //   url:'mongodb://101.200.54.162:27017/runoob',
    url: 'mongodb://127.0.0.1:27017/runoob',
-
     options: {
       useNewUrlParser: true
     },
