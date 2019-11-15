@@ -87,24 +87,24 @@ module.exports = {
     // 这个选项不会影响 `*.vue` 文件。
     modules: true
   },
-  rules: [
-     // ... 其它规则省略
-     {
-       test: /\.css$/,
-       use: [
-         'vue-style-loader',
-         {
-           loader: 'css-loader',
-           options: {
-             // 开启 CSS Modules
-             modules: true,
-             // 自定义生成的类名
-             localIdentName: '[local]_[hash:base64:8]'
-           }
-         }
-       ]
-     },
-   ],
+  // rules: [
+  //    // ... 其它规则省略
+  //    {
+  //      test: /\.css$/,
+  //      use: [
+  //        'vue-style-loader',
+  //        {
+  //          loader: 'css-loader',
+  //          options: {
+  //            // 开启 CSS Modules
+  //            modules: true,
+  //            // 自定义生成的类名
+  //            localIdentName: '[local]_[hash:base64:8]'
+  //          }
+  //        }
+  //      ]
+  //    },
+  //  ],
   // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
   // 在多核机器下会默认开启。
   parallel: require('os').cpus().length > 1,
@@ -119,7 +119,7 @@ module.exports = {
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:7001',
+        target: 'http://127.0.0.1:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

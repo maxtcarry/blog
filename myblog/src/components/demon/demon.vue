@@ -19,11 +19,12 @@
 </template>
 
 <script>
-import sassStyles from './demon.css'
+
 export default {
   name:'Demon',
   data(){
     return {
+
       info:'...',
       userinfo:[
         ['name:','address:',''],
@@ -51,8 +52,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss" module>
-
-
+<style scoped lang="scss" >
+@import './demon.css';
 
 </style>

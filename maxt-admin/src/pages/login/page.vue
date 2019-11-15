@@ -92,6 +92,7 @@ export default {
 
     // 提交登录信息
     submit () {
+      console.log("this",this)
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
           // 登录

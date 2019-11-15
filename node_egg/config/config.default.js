@@ -5,7 +5,7 @@ module.exports = appInfo => {
   config.keys = "demonsLOVE";
   config.security = {
     csrf: {
-      enable: true ,
+      enable: false ,
       ignoreJSON: false,
       headerName: 'demontoken',
     },

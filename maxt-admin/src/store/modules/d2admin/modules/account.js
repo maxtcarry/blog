@@ -20,6 +20,7 @@ export default {
         name: 'index'
       }
     }) {
+      console.log("vm",vm.$confirm)
       // 请求 token
       GetToken({}).then(async res => {
         util.cookies.set('uuid', 'demons')

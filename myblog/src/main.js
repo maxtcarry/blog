@@ -8,7 +8,7 @@ import './assets/css/common.css' /*引入公共样式*/
 // axios.defaults.withCredentials=true;//让ajax携带cookie
 //
 // Vue.prototype.$axios = axios;
-// import live2d4vue from 'live2d4vue'
+import store from './store/store'
 Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   // ...
@@ -17,6 +17,6 @@ router.beforeEach((to, from, next) => {
 })
 new Vue({
   router,
-  // store,
+  store,
   render: h => h(App)
 }).$mount("#app")

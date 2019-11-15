@@ -2,7 +2,7 @@
 .main{
   margin-top: 68px;
   min-height: calc(100vh - 116px);
-  height: 510px;
+  height: auto;
   /* backgrofund:linear-gradient(27deg,#4CB4E7 30%,#F8F8FF 50%,#E23352 65%,#F2EFE6 90%,#F17C67 100%); */
   background: #F2EFE6;
   position: relative;

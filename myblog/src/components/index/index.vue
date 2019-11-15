@@ -16,7 +16,7 @@
     <div><span>网站已运行</span><a href="javascript:void(0);">{{daycoding}}</a>天{{hourscoding}}小时</div>
   </div>
   <div class="">
-  
+      {{a}}
   </div>
 </div>
 </template>
@@ -25,6 +25,7 @@ import {
   TweenMax,
   TweenLite
 } from "gsap/TweenMax";
+import { mapActions,mapState } from 'vuex'
 export default {
   name: 'Index',
   data() {
@@ -59,6 +60,7 @@ export default {
   },
 
   methods: {
+    ...mapActions(["log"]),
     changeBG: function() {
       var random = parseInt(Math.random() * 990);
       var imgurl = new Image();
@@ -68,10 +70,14 @@ export default {
           'background-image': `url(${imgurl.src})`,
         };
       }
+      this.log();
     },
-
   },
-
+computed:{
+  ...mapState({
+    a: state =>state.a,
+  }),
+}
 }
 </script>
 <style media="screen" scoped lang="scss">

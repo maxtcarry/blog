@@ -8,11 +8,11 @@ export function AccountLogin (data) {
     data
   })
 }
-export function GetToken () {
-  return request({
-    url: url + 'home'
-  })
-}
+// export function GetToken () {
+//   return request({
+//     url: url + 'home'
+//   })
+// }
 export function LoginOut () {
   return request({
     url: url + 'loginout'
