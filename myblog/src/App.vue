@@ -43,7 +43,8 @@ export default {
 }
 #app {
   font-family: panda, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-family: panda, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--font-color1);
   min-width: 1200px;
