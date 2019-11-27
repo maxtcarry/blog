@@ -1,7 +1,7 @@
 import request from '@/plugin/axios'
 import url from '@/api/url'
 
-// let url = 'http://101.200.54.162:7001/'
+
 // 新增文章
 export function addArticle (data) {
   return request({
